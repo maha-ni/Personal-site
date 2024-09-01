@@ -13,6 +13,14 @@
     src: url(../font/Roboto-Fontjo.com/Roboto-Condensed.ttf);
 }
 
+body{
+    background-color: var(--dark);
+    direction: rtl;
+    overflow-x: hidden !important;
+    z-index: 1;
+    font-family: iran sans;
+}
+
 :root{
     --d: 2500ms;
     --angle: 90deg;
@@ -25,7 +33,7 @@
 }
 
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track{
@@ -36,13 +44,6 @@
 ::-webkit-scrollbar-thumb{
     background: var(--blue);
     border-radius: 15px;
-}
-body{
-    background-color: var(--dark);
-    direction: rtl;
-    overflow-x: hidden;
-    z-index: 1;
-    font-family: iran sans;
 }
 
 span{
