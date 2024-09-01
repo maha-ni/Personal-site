@@ -161,9 +161,6 @@ summary{
     animation : blink-caret 0.6s step-end infinite , type 5s steps(34,end) ; */
 }
 
-.two{
-    overflow-y: scroll
-}
 
 .text-sec2{
     position: relative;
