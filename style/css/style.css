@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "iran sans";
+    src: url(../font/IRANSans.ttf);
+}
+@font-face {
+    font-family: "roboto1";
+    src: url(../font/Roboto-Fontjo.com/Roboto-Condensed.ttf);
+}
+
+:root{
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50;
+    --dark: #1D1D1D ;
+    --blue:#2272FF;
+}
+
+body{
+    background-color: var(--dark);
+    direction: rtl;
+    overflow-x: hidden;
+    z-index: 1;
+    font-family: iran sans;
+}
+
+span{
+    color: var(--blue);
+    font-size: 21px;
+}
+
+
+.navbar{
+    border-bottom: 2px solid var(--blue);
+    background-color: var(--dark);
+    position: absolute;
+    top: 25px;
+    border-radius:0 0 25px 25px;
+}
+
+.navbar-nav{
+    width: 100%;
+    direction: rtl;
+    max-width: fit-content !important;
+}
+
+.alink{
+    color: #ffff !important;
+    font-size: 18px !important;
+    position: relative !important;
+}
+
+.alink.active{
+    color: var(--blue) !important;
+}
+
+.alink::before{
+    content: "";
+    width: 0%;
+    height: 2px;
+    color: var(--blue);
+    background-color: var(--blue);
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    transition: width 0.5s;
+    box-shadow: 0 0 7px var(--blue);
+}
+
+.alink:hover::before{
+    width: 100%;
+}
+
+.navbar-collapse{
+    margin-right: 30px;
+}
+
+.icon{
+    font-size: xx-large;
+    color: var(--blue);
+}
+
+
+/* .nav-item{
+    text-align: center;
+} */
+
+
+.main{
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.dv1{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    /* padding-top: 10rem; */
+    margin-top: 10rem;
+}
+
+.dv4{
+    margin-top: 1.5rem;
+    z-index: 3;
+}
+
+.dv4 p {
+    color: #ffff;
+    text-align: justify;
+    background-color: var(--dark);
+    line-height: 25px;
+}
+
+details{
+    padding-top: 1.5rem;
+    display: block;
+}
+
+summary{
+    color: var(--blue);
+    font-size: 20px;
+    background-color: var(--dark);
+}
+
+
+.img1{
+    width: 400px;
+    height: 400px;
+    margin: 30% 15%;
+    z-index: 2;
+}
+
+.h-title{
+    color: var(--blue);
+    font-size: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+#output {
+    color: #ffff;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* border-left: 2px solid var(--blue);
+    animation : blink-caret 0.6s step-end infinite , type 5s steps(34,end) ; */
+}
+
+.two{
+    overflow-y: scroll
+}
+
+.text-sec2{
+    position: relative;
+    top: 100px;
+}
+
+.dv5{
+    position: relative;
+    top: 18%;
+}
+
+.dv5 img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #00f;
+    position: relative;
+    animation: neon 0.6s infinite;
+} 
+
+.about{
+    margin-top: 200px;
+    text-align: justify;
+    width: 50%;
+    line-height: 30px;
+}
+
+
+.text-ability{
+    top: 120px;
+}
+
+
+
+.programs{
+    border: 2px solid var(--blue);
+    position: relative;
+    top: 20%;
+    direction: ltr;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+.bar{
+    border: 3px solid var(--blue);
+    border-radius: 8px;
+    height: 15px;
+    
+}
+
+.programing-bar1{
+    background-color: var(--blue);
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.programing-bar2{
+    background-color: var(--blue);
+    border-radius: 8px;
+    width: 95%;
+    height: 100%;
+    display: block;
+}
+.programing-bar3{
+    background-color: var(--blue);
+    border-radius: 8px;
+    width: 80%;
+    height: 100%;
+    display: block;
+}
+.programing-bar4{
+    background-color: var(--blue);
+    border-radius: 8px;
+    width: 70%;
+    height: 100%;
+    display: block;
+}
+.programing-bar5{
+    background-color: var(--blue);
+    border-radius: 8px;
+    width: 60%;
+    height: 100%;
+    display: block;
+}
+
+.program h4{
+    font-family: roboto1 !important;
+}
+
+
+.four h1{
+    top: 20%;
+}
+
+.socials{
+    position: relative;
+    top: 55%;
+}
+
+.social img{
+    width: 70px;
+    height: 70px;
+    background-color: var(--blue);
+    border-radius: 50%;
+}
+
+.social img:hover {
+    background-color: #ffff;
+    transition: all 0.3s;
+}
+
+.social p {
+    font-family: roboto1 !important;
+}
+
+/* @keyframes blink-caret{
+    0%,100%{border-color: transparent;}
+    50%{border-color: var(--blue);}
+}
+
+@keyframes type {
+    0%{width: 0;}
+    100%{width: 100%;}
+} */
+
+
+/* .nav-link.active {
+    border-bottom:2px solid white; /* یا هر رنگ دیگری که می‌خواهید */
+
+    
+    @keyframes neon {
+        0%, 100% {
+            box-shadow: 0 0 20px var(--blue), 0 0 30px var(--blue), 0 0 40px var(--blue), 0 0 50px var(--blue), 0 0 60px var(--blue);
+        }
+        50% {
+            box-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue), 0 0 30px var(--blue), 0 0 40px var(--blue), 0 0 50px var(--blue);
+        }
+    }
+
+
+
+    
+@media only screen and (max-width:768px){
+    .dv1{
+        height: 30vh;
+        margin-top: 5rem;
+    }
+    .img1{
+        width: 200px;
+        height: 200px;
+        margin: 30% 25%;
+    }
+    .navbar{
+        top: 0;
+    }
+
+    .text-sec2{
+        position: relative;
+        top: 100px;
+    }
+
+    .about{
+        margin-top: 170px;
+        text-align:justify;
+        width: 75%;
+        line-height: 30px;
+    }
+    .socials{
+        position: relative;
+        top: 40%;
+        
+    }
+
+}
